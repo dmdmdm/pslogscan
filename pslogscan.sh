@@ -49,6 +49,7 @@
 #		      variables
 #  20140815 1.7 mm - cleaned up some comments
 #  20140929 1.8 mm - fixed bug in deep protocol tests check (thanks AE)
+#  20210206 1.9 dm - pull some config parms using postconf
 #
 
 #
