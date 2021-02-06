@@ -18,51 +18,54 @@ Read the comments in the script to see what options you may need to tweak.
 
 Sample output, showing Postscreen rejecting about 18% of the incoming mail. Note the postscreen portion of this maillog is about 340MB in size, about 3 million postscreen log records. The results of the time command are shown after the sample output.
 
->Scanning /var/log/maillog
-> 
->  Screening status log records:
->                  CONNECT:     705024
->                 PASS NEW:      31104
->                 PASS OLD:     228096
->              WHITELISTED:     316224
->              BLACKLISTED:          0
-> 
->                 rejected:     129600  (18%)
-> 
-> 
->  Protocol error log records:
->                   HANGUP:      57024
->                 PREGREET:      10368
->             BARE NEWLINE:          0
->       COMMAND TIME LIMIT:          0
->       COMMAND PIPELINING:          0
-> 
->  DNS black list log records:
->         zen.spamhaus.org:     160704
->           bl.spamcop.net:      51840
->   b.barracudacentral.org:      98496
-> 
->  DNSBL NOQUEUE log records: 
->             DNSBL rank 1:          0
->             DNSBL rank 2:          0
->             DNSBL rank 3:      10368
->             DNSBL rank 4:          0
->             DNSBL rank 5:      10368
->             DNSBL rank 6:      51840
->             DNSBL rank 7:          0
->             DNSBL rank 8:      46656
->             DNSBL rank 9:          0
->           DNSBL rank 10+:          0
-> 
->  DNSBL NOQUEUE by domain: 
->              example.com:      36288
->              example.net:      15552
->              example.org:          0
+```output
+Scanning /var/log/maillog
+ 
+  Screening status log records:
+                  CONNECT:     705024
+                 PASS NEW:      31104
+                 PASS OLD:     228096
+              WHITELISTED:     316224
+              BLACKLISTED:          0
+ 
+                 rejected:     129600  (18%)
+ 
+ 
+  Protocol error log records:
+                   HANGUP:      57024
+                 PREGREET:      10368
+             BARE NEWLINE:          0
+       COMMAND TIME LIMIT:          0
+       COMMAND PIPELINING:          0
+ 
+  DNS black list log records:
+         zen.spamhaus.org:     160704
+           bl.spamcop.net:      51840
+   b.barracudacentral.org:      98496
+ 
+  DNSBL NOQUEUE log records: 
+             DNSBL rank 1:          0
+             DNSBL rank 2:          0
+             DNSBL rank 3:      10368
+             DNSBL rank 4:          0
+             DNSBL rank 5:      10368
+             DNSBL rank 6:      51840
+             DNSBL rank 7:          0
+             DNSBL rank 8:      46656
+             DNSBL rank 9:          0
+           DNSBL rank 10+:          0
+ 
+  DNSBL NOQUEUE by domain: 
+              example.com:      36288
+              example.net:      15552
+              example.org:          0
+ '''
 
 Time command results for the above sample:
 
-> real    0m8.112s
-> user    0m3.350s
-> sys     0m3.703s
-
+```output
+real    0m8.112s
+user    0m3.350s
+sys     0m3.703s
+```
 
