@@ -11,7 +11,7 @@ The script requires a small amount of configuration by hand at the top.  This up
 options by hand.  It uses the `postconf` command to find the info.
 So if you change those options in `/etc/postfix/main.cf` you don't need to update the script.
 However, you *still* need to hand configure a bit.
-Works fine with bash5 on Linux
+Works fine with bash5 on Linux.  Runs very quickly for me.
 
 # Readme from orginal
 
@@ -62,13 +62,5 @@ Scanning /var/log/maillog
               example.com:      36288
               example.net:      15552
               example.org:          0
-```
-
-Time command results for the above sample:
-
-```output
-real    0m8.112s
-user    0m3.350s
-sys     0m3.703s
 ```
 
