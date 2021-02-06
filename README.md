@@ -8,9 +8,10 @@ Minor improvements [to the fine script](https://archive.mgm51.com/sources/pslogs
 Posted on github with permission.
 
 The script required a small amount of configuration by hand at the top.  This update make it unnecessary to hardcoded 2 of those
-options by hand.  It used the `postconf` command to find the info.  Works fine with bash5 on Linux
+options by hand.  It used the `postconf` command to find the info.  You still need to hand figure a bit.
+Works fine with bash5 on Linux
 
-# Read me from orginal
+# Readme from orginal
 
 Initially tested on FreeBSD 8.4 and Postfix 2.11.1. It has run fine on interim versions of FreeBSD and Postfix. Currently running with FreeBSD 12.1 and Postfix 3.5.7.
 
@@ -59,7 +60,7 @@ Scanning /var/log/maillog
               example.com:      36288
               example.net:      15552
               example.org:          0
- '''
+'''
 
 Time command results for the above sample:
 
