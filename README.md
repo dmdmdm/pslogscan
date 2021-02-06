@@ -60,7 +60,7 @@ Scanning /var/log/maillog
               example.com:      36288
               example.net:      15552
               example.org:          0
-'''
+```
 
 Time command results for the above sample:
 
