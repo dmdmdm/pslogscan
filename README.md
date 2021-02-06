@@ -4,11 +4,13 @@ This script gives an overview of how Postscreen is performing. Written for /bin/
 
 # This version
 
-Minor improvements [to the fine script](https://archive.mgm51.com/sources/pslogscan.html) by Mike Miller
+Minor improvements [to the fine script](https://archive.mgm51.com/sources/pslogscan.html) by Mike Miller.
 Posted on github with permission.
 
-The script required a small amount of configuration by hand at the top.  This update make it unnecessary to hardcoded 2 of those
-options by hand.  It used the `postconf` command to find the info.  You still need to hand figure a bit.
+The script required a small amount of configuration by hand at the top.  This update makes it unnecessary to hardcoded 2 of those
+options by hand.  It uses the `postconf` command to find the info.
+So if you change those options in `/etc/postfix/main.cf` you don't need to update the script.
+You *still* need to hand configure a bit.
 Works fine with bash5 on Linux
 
 # Readme from orginal
