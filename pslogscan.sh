@@ -70,7 +70,7 @@ PFPSConfDNSBLThreshold=$(postconf postscreen_dnsbl_threshold | sed -e 's/.*=\s*/
 #  the postscreen_dnsbl_sites in main.cf
 #  (quoted string of space-delimited DNSBL sites)
 # DNSBLList="zen.spamhaus.org bl.spamcop.net b.barracudacentral.org"
-DNSBLList=$(postconf postscreen_dnsbl_sites  | sed -e 's/.*=\s*//' | sed -e 's/\*[\-0-9]*//g')
+DNSBLList=$(postconf postscreen_dnsbl_sites  | sed -e 's/.*=\s*//' | sed -e 's/\*[-0-9]*//g')
 
 # Domains to process for "DNSBL NOQUEUE by domain" section,
 #  the domains processed by this MTA
