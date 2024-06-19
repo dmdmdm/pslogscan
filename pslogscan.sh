@@ -112,7 +112,7 @@ TmpFile=$(mktemp ${mktempTemplate})
 
 if [[ $# = 0 ]]; then 
 	echo "Usage: $0 maillogfile"
-   echo "   or: $0 -c to pipe input"
+   echo "   or: $0 -c to read from stdin"
 	exit 1
 fi
 
