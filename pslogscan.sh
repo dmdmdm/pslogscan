@@ -112,21 +112,19 @@ TmpFile=$(mktemp ${mktempTemplate})
 
 if [[ $# = 0 ]]; then 
 	echo "Usage: $0 maillogfile"
-   echo "   or: $0 -c to read from stdin"
+	echo "   or: $0 -c to read from stdin"
 	exit 1
 fi
 
 if [ "$1" == "-c" ]; then
-   echo Scanning from stdin
-   # Look only at the postscreen log records
-   cat - | grep " postfix/postscreen\[" > ${PostscreenLog}
-
+	echo Scanning from stdin
+	# Look only at the postscreen log records
+	cat - | grep " postfix/postscreen\[" > ${PostscreenLog}
 elif [ -f "$1" ]; then
-   File2Scan=$1
-   echo Scanning ${File2Scan}
-   # Look only at the postscreen log records
-   grep " postfix/postscreen\[" ${File2Scan} > ${PostscreenLog}
-
+	File2Scan=$1
+	echo Scanning ${File2Scan}
+	# Look only at the postscreen log records
+	grep " postfix/postscreen\[" ${File2Scan} > ${PostscreenLog}
 else
 	echo "$1" does not exist.
 	exit 1
