@@ -13,6 +13,10 @@ So if you change those options in `/etc/postfix/main.cf` you don't need to updat
 However, please still read the config section of the script to make sure its ok for you.
 Works fine with bash5 on Linux.  Runs very quickly for me.
 
+# Typical Usage with systemd
+
+journalctl -u postfix | pslogscan -c
+
 # Readme from orginal
 
 Initially tested on FreeBSD 8.4 and Postfix 2.11.1. It has run fine on interim versions of FreeBSD and Postfix. Currently running with FreeBSD 12.1 and Postfix 3.5.7.
