@@ -15,7 +15,7 @@ Works fine with bash5 on Linux.  Runs very quickly for me.
 
 # Typical Usage with systemd
 
-journalctl -u postfix | pslogscan -c
+ `journalctl -u postfix | pslogscan -c`
 
 # Readme from orginal
 
