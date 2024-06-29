@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 #
 # Copyright (c) 2013, 2014 Mike Miller <mmiller@mgm51.com>
@@ -110,13 +110,13 @@ Field2Width=10
 PostscreenLog=$(mktemp ${mktempTemplate})
 TmpFile=$(mktemp ${mktempTemplate})
 
-if [[ $# = 0 ]]; then 
+if [ $# = 0 ] && [ -t 0 ]; then 
 	echo "Usage: $0 maillogfile"
 	echo "   or: command | $0"
 	exit 1
 fi
 
-if [[ -t 0 ]]; then
+if [ ! -t 0 ]; then
 	echo Scanning from stdin
 	# Look only at the postscreen log records
 	cat - | grep " postfix/postscreen\[" > ${PostscreenLog}
